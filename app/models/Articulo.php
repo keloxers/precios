@@ -5,7 +5,7 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class Articulo extends Eloquent {
 
-		protected $table = 'Articulos';
+		protected $table = 'articulos';
 
 		protected $fillable = ['articulo'];
 

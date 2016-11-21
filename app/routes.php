@@ -11,9 +11,9 @@
 |
 */
 
-// $password = Hash::make('clavesecreta:)');
+// $password = Hash::make('Happy123:)');
 // echo $password;
-//die;
+// die;
 
 
 
