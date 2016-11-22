@@ -104,6 +104,9 @@ Route::resource('articulos', 'ArticulosController');
 
 							$precio = new Precio;
 							$precio->precio =  $pprecio;
+							$precio->users_id =  1;
+							$precio->clientes_id =  2;
+							$precio->articulos_id =  1;
 							$precio->save();
 
 
