@@ -102,19 +102,7 @@ Route::resource('articulos', 'ArticulosController');
 			// $precio = $_POST['precio'];
 			try {
 
-							$result[] = array(
-
-									"llego" => "ok",
-									"error" => "no"
-
-							);
-
-							header('HTTP/1.1 200 OK');
-							header('Content-type: text/html');
-
-							echo json_encode($result);
-							return;
-
+		
 
 
 			}
