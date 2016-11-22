@@ -104,6 +104,9 @@ Route::resource('articulos', 'ArticulosController');
 
 				if (Input::has('precio'))
 						{
+							$precio = new Precio;
+							$precio->precio =  10;
+							$precio->save();
 
 						}
 
