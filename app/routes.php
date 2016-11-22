@@ -97,9 +97,9 @@ Route::resource('articulos', 'ArticulosController');
 
 		Route::post('/api/precios', function () {
 
-			$cliente = $_POST['cliente'];
-			$articulo = $_POST['articulo'];
-			$precio = $_POST['precio'];
+			// $cliente = $_POST['cliente'];
+			// $articulo = $_POST['articulo'];
+			// $precio = $_POST['precio'];
 			try {
 
 				header('HTTP/1.1 200 OK');
@@ -112,11 +112,7 @@ Route::resource('articulos', 'ArticulosController');
 			}
 			catch(PDOException $e)
 			{
-				header('HTTP/1.1 200 OK');
-				header('Content-type: text/html');
-
-				echo json_encode("no2");
-				return;
+				echo $sql . "<br>" . $e->getMessage();
 
 			}
 
