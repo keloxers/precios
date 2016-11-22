@@ -99,13 +99,12 @@ Route::resource('articulos', 'ArticulosController');
 
 			$pprecio = Input::get('precio', 10);
 
-			// $articulo = $_POST['articulo'];
 
 			try {
 
-							// $precio = new Precio;
-							// $precio->precio =  $pprecio;
-							// $precio->save();
+							$precio = new Precio;
+							$precio->precio =  $pprecio;
+							$precio->save();
 
 
 
