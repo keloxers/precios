@@ -93,3 +93,23 @@ Route::resource('articulos', 'ArticulosController');
 										echo json_encode($result);
 										return;
 								});
+
+
+		Route::post('/api/precios', function () {
+
+			$cliente = $_POST['cliente'];
+			$articulo = $_POST['articulo'];
+			$precio = $_POST['precio'];
+			try {
+
+					echo "<br>Entro precio";
+
+			}
+			catch(PDOException $e)
+			{
+			    echo "<br>" . $e->getMessage();
+			}
+
+
+
+		});
