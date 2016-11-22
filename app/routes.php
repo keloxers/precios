@@ -102,12 +102,22 @@ Route::resource('articulos', 'ArticulosController');
 			$precio = $_POST['precio'];
 			try {
 
-					echo "<br>Entro precio";
+				header('HTTP/1.1 200 OK');
+				header('Content-type: text/html');
+
+				echo json_encode("ok1");
+				return;
+
 
 			}
 			catch(PDOException $e)
 			{
-			    echo "<br>" . $e->getMessage();
+				header('HTTP/1.1 200 OK');
+				header('Content-type: text/html');
+
+				echo json_encode("no2");
+				return;
+
 			}
 
 
