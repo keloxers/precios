@@ -97,16 +97,16 @@ Route::resource('articulos', 'ArticulosController');
 
 		Route::post('/api/precios', function () {
 
-			// $pprecio = Input::get('precio', 10);
+			$pprecio = Input::get('precio', 10);
 
 			// $articulo = $_POST['articulo'];
-			// $precio = $_POST['precio'];
+
 			try {
 
 							// $precio = new Precio;
 							// $precio->precio =  $pprecio;
 							// $precio->save();
-							
+
 
 
 
