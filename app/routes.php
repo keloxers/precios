@@ -97,7 +97,11 @@ Route::resource('articulos', 'ArticulosController');
 
 		Route::post('/api/precios', function () {
 
-			$pprecio = Input::get('precio', 10);
+
+
+			$pclientes_id = Input::get('clientes_id', 0);
+			$particulos_id = Input::get('articulos_id', 0);
+			$pprecio = Input::get('precio', 0);
 
 
 			try {
@@ -105,8 +109,8 @@ Route::resource('articulos', 'ArticulosController');
 							$precio = new Precio;
 							$precio->precio =  $pprecio;
 							$precio->users_id =  1;
-							$precio->clientes_id =  2;
-							$precio->articulos_id =  1;
+							$precio->clientes_id =  $pclientes_id;
+							$precio->articulos_id =  $particulos_id;
 							$precio->save();
 
 
