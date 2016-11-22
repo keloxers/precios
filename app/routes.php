@@ -106,9 +106,9 @@ Route::resource('articulos', 'ArticulosController');
 							// $precio = new Precio;
 							// $precio->precio =  $pprecio;
 							// $precio->save();
-							return;
+							
 
-						}
+
 
 
 
