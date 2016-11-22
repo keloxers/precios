@@ -102,7 +102,12 @@ Route::resource('articulos', 'ArticulosController');
 			// $precio = $_POST['precio'];
 			try {
 
-		
+				if (Input::has('precio'))
+						{
+
+						}
+
+
 
 
 			}
