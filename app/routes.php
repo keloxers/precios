@@ -89,7 +89,7 @@ Route::resource('precios', 'PreciosController');
 
 							$precio = new Precio;
 							$precio->precio =  $pprecio;
-							$precio->users_id =  1;
+							$precio->usuarios_id =  1;
 							$precio->clientes_id =  $pclientes_id;
 							$precio->articulos_id =  $particulos_id;
 							$precio->save();
