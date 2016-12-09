@@ -128,7 +128,7 @@ Route::resource('precios', 'PreciosController');
 							// $precio->articulos_id =  $particulos_id;
 							// $precio->save();
 
-							$usuario = DB::table('usuario')
+							$usuario = DB::table('usuarios')
 																		->where('usuario','=',$pusuario)
 																		->where('clave','=',$pclave)
 																		->get();
