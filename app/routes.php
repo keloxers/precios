@@ -130,7 +130,7 @@ Route::resource('precios', 'PreciosController');
 
 							$usuario = DB::table('usuario')
 																		->where('usuario','=',$pusuario)
-																		->where('clave','=',$clave)
+																		->where('clave','=',$pclave)
 																		->get();
 
 								if ($usuario) {
