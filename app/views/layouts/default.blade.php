@@ -100,18 +100,23 @@
               </a>
               <ul class="nav bg">
                 <li >
+                  <a href="/articulos" >
+                    <i class="fa fa-angle-right"></i>
+                    <span>Articulos</span>
+                  </a>
+                </li>
+                <li >
                   <a href="/clientes" >
                     <i class="fa fa-angle-right"></i>
                     <span>Clientes</span>
                   </a>
                 </li>
                 <li >
-                  <a href="/articulos" >
+                  <a href="/usuarios" >
                     <i class="fa fa-angle-right"></i>
-                    <span>Articulos</span>
+                    <span>Usuarios</span>
                   </a>
                 </li>
-
               </ul>
             </li>
 
@@ -128,7 +133,7 @@
               </a>
               <ul class="nav bg">
                 <li >
-                  <a href="/diarios" >
+                  <a href="/precios" >
                     <i class="fa fa-angle-right"></i>
                     <span>Precios</span>
                   </a>

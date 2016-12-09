@@ -40,56 +40,38 @@ Route::resource('clientes', 'ClientesController');
 Route::get('/articulos/{id}/delete', 'ArticulosController@destroy');
 Route::resource('articulos', 'ArticulosController');
 
+Route::get('/usuarios/{id}/delete', 'UsuariosController@destroy');
+Route::resource('usuarios', 'UsuariosController');
 
-
+Route::resource('precios', 'PreciosController');
 
 				Route::get('/api/clientes', function () {
-
 						$clientes = DB::table('clientes')->get();
-
-						//									->where('fecha', '>=', $fecha)
-						//									->orderBy('fecha', 'asc')->paginate(3);
-
 						$result  = array();
 						foreach ($clientes as $cliente) {
-
 									$result[] = array(
-
 											"cliente" => $cliente->cliente,
 											"clientes_id" => $cliente->id
-
 									);
 						};
-
 						header('HTTP/1.1 200 OK');
 						header('Content-type: text/html');
-
 						echo json_encode($result);
 						return;
 				});
-
-
 								Route::get('/api/articulos', function () {
-
 										$articulos = DB::table('articulos')->get();
-
-										//									->where('fecha', '>=', $fecha)
-										//									->orderBy('fecha', 'asc')->paginate(3);
-
+													//									->where('fecha', '>=', $fecha)
+													//									->orderBy('fecha', 'asc')->paginate(3);
 										$result  = array();
 										foreach ($articulos as $articulo) {
-
 													$result[] = array(
-
 															"articulo" => $articulo->articulo,
 															"articulos_id" => $articulo->id
-
 													);
 										};
-
 										header('HTTP/1.1 200 OK');
 										header('Content-type: text/html');
-
 										echo json_encode($result);
 										return;
 								});
@@ -97,8 +79,7 @@ Route::resource('articulos', 'ArticulosController');
 
 		Route::post('/api/precios', function () {
 
-
-
+			// $pclientes_id = Input::get('clientes_id', 0);
 			$pclientes_id = Input::get('clientes_id', 0);
 			$particulos_id = Input::get('articulos_id', 0);
 			$pprecio = Input::get('precio', 0);
@@ -116,6 +97,47 @@ Route::resource('articulos', 'ArticulosController');
 
 
 
+
+
+
+			}
+			catch(PDOException $e)
+			{
+				echo "Error:<br>" . $e->getMessage();
+
+			}
+
+
+
+		});
+
+
+		Route::post('/api/login', function () {
+
+			// $pclientes_id = Input::get('clientes_id', 0);
+			$pusuario = Input::get('usuario', "");
+			$pclave = Input::get('clave', "");
+
+			try {
+
+
+							// $precio = new Precio;
+							// $precio->precio =  $pprecio;
+							// $precio->users_id =  1;
+							// $precio->clientes_id =  $pclientes_id;
+							// $precio->articulos_id =  $particulos_id;
+							// $precio->save();
+
+							$usuario = DB::table('usuario')
+																		->where('usuario','=',$pusuario)
+																		->where('clave','=',$clave)
+																		->get();
+
+								if ($usuario) {
+
+								} else {
+										echo "Error: Bad users and password<br>";
+								}
 
 
 
